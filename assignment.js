@@ -121,14 +121,16 @@ function megaFriend(friendsName){
   //1st we decler 1st element is biggest of my fr list 
           
     var biggestName=nameArray[0];
-    // trying to decide  array can no be empty 
-    if(nameArray.length!=0){
+    // there we checking is array is empty 
+    // checking given array is number or else 
+    // any of string is availble this can accept and counting the biggest number
+    if(nameArray.length!=0&& !nameArray.every(element=>element>=0)){
     
     // lopping and compare each index which one is biggest 
     
          for(let index=1;index<nameArray.length;index++){
          
-          // checking is given arry index is string or number or ease 
+          // checking is given arry index is string 
 
           if(typeof nameArray[index]==="string"){
               
@@ -147,18 +149,14 @@ function megaFriend(friendsName){
      return biggestName;
 
     }else{
-        console.log( "empty array list ! try again  ");
+        console.log( "empty array list  or given arry is number ! try again  ");
     }
    
 }
 
 
 
-var array=[12,1234567,"hello",' tamanna'];
-console.log("biggest name:"+megaFriend(array));
-console.log("totalBudget Needed:"+budgetCalculator(-1,2,3));
-console.log("hotelcost:"+hotelCost(-21));
-console.log("metter:"+kilometerToMeter(-10));
+
 
 
 
